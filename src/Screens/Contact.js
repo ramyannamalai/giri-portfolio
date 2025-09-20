@@ -120,7 +120,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Info */}
-      <div className="flex flex-col md:flex-row justify-left items-center gap-8 mt-10 text-gray-300 text-lg">
+      <div className="flex flex-col md:flex-row justify-left items-left gap-8 mt-10 text-gray-300 text-lg">
          <a
     href="tel:+919123506136"
     className="flex items-center gap-2 hover:text-purple-400 transition cursor-pointer"

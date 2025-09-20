@@ -100,7 +100,7 @@ const Header = () => {
           {/* Social Media Icons (Mobile) */}
           <div className="flex justify-center space-x-6 text-2xl text-purple-600">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/girieswarann/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
@@ -108,7 +108,7 @@ const Header = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/giries_ctr?igsh=MWpnM213dDVuc2w5Ng=="
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
@@ -116,7 +116,7 @@ const Header = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/+919123506136"
               rel="noopener noreferrer"
               className="hover:text-gray-400"
             >

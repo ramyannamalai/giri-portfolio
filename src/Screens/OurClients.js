@@ -24,32 +24,33 @@ export default function OurClients() {
     logo10,
   ];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    arrows: false,
-    pauseOnHover: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 4 }, // ✅ fewer logos on tab
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 3 }, // ✅ fewer logos on mobile landscape
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 2 }, // ✅ fewer logos on small mobile
-      },
-    ],
-  };
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 6, // default desktop
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 5000,
+  autoplaySpeed: 0,
+  cssEase: "linear",
+  arrows: false,
+  pauseOnHover: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 4 },
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 3 },
+    },
+    {
+      breakpoint: 600, // ✅ mobiles and smaller
+      settings: { slidesToShow: 2, slidesToScroll: 1 },
+    },
+  ],
+};
+
 
   return (
     <section className="bg-black py-10 md:py-16">

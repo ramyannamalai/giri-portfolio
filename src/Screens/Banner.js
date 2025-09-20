@@ -7,19 +7,20 @@ import b2 from "../assets/ban2.png";
 const Banner = () => {
   return (
     <section className="bg-[#0F1416] text-white h-full pt-40 flex items-center justify-center px-6 md:px-16 bg-cover bg-center bg-no-repeat">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center max-w-7xl w-full">
         {/* Left Content */}
-        <div>
+        <div className="text-center md:text-left">
           <p className="uppercase text-sm tracking-widest text-white text-gray-400">
             Girieswaran
           </p>
           {/* Gradient underline */}
-          <div className="mt-4 mb-4  w-24 h-[2px] bg-gradient-to-r from-red-500 via-green-500 to-purple-500 rounded-full"></div>
+<div className="mt-4 mb-4 w-24 h-[2px] bg-gradient-to-r from-red-500 via-green-500 to-purple-500 rounded-full mx-auto md:mx-0"></div>
 
-          <h1 className="text-4xl font-exo md:text-[88px] font-bold leading-tight mt-0">
-            PROFESSIONAL <br />
-            <span className="text-purple-500 font-exo"> VIDEO </span>EDITOR
-          </h1>
+         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[88px] font-exo font-bold leading-tight mt-0">
+  PROFESSIONAL <br />
+  <span className="text-purple-500 font-exo"> VIDEO </span>EDITOR
+</h1>
+
           <p className="font-exo  mt-4 font-white">
             Making Your Videos Look More Cool.
           </p>
