@@ -218,7 +218,7 @@ export default function MyWork() {
   const getImageSize = (category) => {
     if (category === "Long Videos") return "h-48";
     if (category === "Logo Design")
-      return "h-40 p-6 bg-white object-contain";
+      return "h-46 w-auto p-6 bg-white object-contain";
     if (category === "Reels") return "h-[520px] object-contain";
     return "h-48";
   };

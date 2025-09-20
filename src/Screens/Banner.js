@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg from "../assets/hero.png"; // 👉 replace with your image
+import heroImg from "../assets/heroo.png"; // 👉 replace with your image
 import { FaPlay } from "react-icons/fa";
 import b1 from "../assets/ban1.png";
 import b2 from "../assets/ban2.png";
