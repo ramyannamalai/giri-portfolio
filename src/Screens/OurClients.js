@@ -24,33 +24,34 @@ export default function OurClients() {
     logo10,
   ];
 
-const settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 6, // default desktop
-  slidesToScroll: 1,
-  autoplay: true,
-  speed: 5000,
-  autoplaySpeed: 0,
-  cssEase: "linear",
-  arrows: false,
-  pauseOnHover: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: 4 },
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 3 },
-    },
-    {
-      breakpoint: 600, // ✅ mobiles and smaller
-      settings: { slidesToShow: 2, slidesToScroll: 1 },
-    },
-  ],
-};
+  // desktop & tablet slider
+  const settingsDesktop = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 6, // default desktop
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    arrows: false,
+    pauseOnHover: false,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+    ],
+  };
 
+  // mobile-only slider
+  const settingsMobile = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 800,
+    arrows: false,
+  };
 
   return (
     <section className="bg-black py-10 md:py-16">
@@ -61,18 +62,35 @@ const settings = {
         <div className="w-40 h-1 bg-gradient-to-r from-red-500 via-green-500 to-blue-500 mx-auto mt-2"></div>
       </div>
 
-      <Slider {...settings}>
-        {logos.map((logo, idx) => (
-          <div key={idx} className="px-3 flex justify-center"> 
-            {/* ✅ added px-3 (gap between logos) */}
-            <img
-              src={logo}
-              alt={`Logo ${idx + 1}`}
-              className="h-20 w-auto rounded-xl object-contain transition focus:outline-none focus:ring-0"
-            />
-          </div>
-        ))}
-      </Slider>
+      {/* ✅ Desktop & Tablet slider (hidden on mobile) */}
+      <div className="hidden sm:block">
+        <Slider {...settingsDesktop}>
+          {logos.map((logo, idx) => (
+            <div key={idx} className="px-3 flex justify-center">
+              <img
+                src={logo}
+                alt={`Logo ${idx + 1}`}
+                className="h-20 w-auto object-contain transition rounded-xl"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* ✅ Mobile slider (hidden on tablet & desktop) */}
+      <div className="block sm:hidden">
+        <Slider {...settingsMobile}>
+          {logos.map((logo, idx) => (
+            <div key={idx} className="px-2 flex justify-center">
+              <img
+                src={logo}
+                alt={`Logo ${idx + 1}`}
+                className="h-24 w-auto object-contain transition rounded-lg"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </section>
   );
 }
