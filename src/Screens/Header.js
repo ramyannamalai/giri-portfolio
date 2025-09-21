@@ -78,7 +78,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md px-4 py-4 space-y-6 text-center font-semibold">
+        <div className="md:hidden bg-white shadow-md px-4 py-4 space-y-6 text-left font-semibold">
           <ul className="space-y-4">
             {navLinks.map((link) => (
               <li key={link.id}>
@@ -98,7 +98,7 @@ const Header = () => {
           </ul>
 
           {/* Social Media Icons (Mobile) */}
-          <div className="flex justify-center space-x-6 text-2xl text-purple-600">
+          <div className="flex justify-left space-x-6 text-2xl text-purple-600">
             <a
               href="https://www.linkedin.com/in/girieswarann/"
               target="_blank"
