@@ -1,12 +1,5 @@
 import { useState } from "react";
-import {
-  Play,
-  Film,
-  Palette,
-  ExternalLink,
-} from "lucide-react";
 
-// Images
 import longv1 from "../assets/longv1.jpeg";
 import longv2 from "../assets/longv2.jpeg";
 import longv3 from "../assets/longv3.jpeg";
@@ -34,10 +27,9 @@ import insta91 from "../assets/insta9.png";
 import insta92 from "../assets/insta92.jpeg";
 import insta93 from "../assets/insta93.jpeg";
 
-// ================= DATA =================
-
+// ✅ Works array
 const works = [
-  // REELS
+  // Reels
   {
     id: 1,
     category: "Reels",
@@ -50,6 +42,7 @@ const works = [
     id: 2,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta4,
     link: "https://www.instagram.com/reel/DOqZOLZj7Sp/?igsh=MXYwd2gxYXBhb25jag==",
   },
@@ -58,6 +51,7 @@ const works = [
     id: 3,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta5,
     link: "https://www.instagram.com/reel/DN-qL1Sk7GP/?igsh=emQwZDU1OTVocWgz",
   },
@@ -66,6 +60,7 @@ const works = [
     id: 4,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta6,
     link: "https://www.instagram.com/reel/DN5T8mEEfkn/?igsh=MXd6MTNsN3NnenFyaQ==",
   },
@@ -74,6 +69,7 @@ const works = [
     id: 5,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta7,
     link: "https://www.instagram.com/reel/DOGX1PNjx97/?igsh=MWdteWxzaWhmcmNycQ==",
   },
@@ -82,6 +78,7 @@ const works = [
     id: 6,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta8,
     link: "https://www.instagram.com/reel/DOGpOxCkg9n/?igsh=cjJzZm9rODI2bTE2",
   },
@@ -90,6 +87,7 @@ const works = [
     id: 7,
     category: "Reels",
     subCategory: "Promotion",
+    title: "Promo Reel",
     img: insta91,
     link: "https://www.instagram.com/reel/DTdldtNk92y/?igsh=bGZwM3ozNjUyZmt3",
   },
@@ -97,46 +95,69 @@ const works = [
   {
     id: 8,
     category: "Reels",
-    subCategory: "Storytelling",
-    img: insta3,
-    link: "https://www.instagram.com/reel/DNbFuKIotrc/?igsh=MWJoZTN4YjBnZHZxaQ==",
+    subCategory: "Promotion",
+    title: "Promo Reel",
+    img: insta92,
+    link: "https://www.instagram.com/reel/DTVRHSqgSaO/?igsh=MWVrMDFhZ2Q5Ymh2YQ%3D%3D",
   },
 
   {
     id: 9,
     category: "Reels",
-    subCategory: "Storytelling",
-    img: insta2,
-    link: "https://www.instagram.com/reel/DOtBJvPk7C9/?igsh=M2ZrcGNvaG10amVw",
+    subCategory: "Promotion",
+    title: "Promo Reel",
+    img: insta93,
+    link: "https://www.instagram.com/reel/DTRy3pOgXVP/?igsh=MW9zZ3U1ODRjc2dtbg%3D%3D",
   },
 
   {
     id: 10,
     category: "Reels",
     subCategory: "Storytelling",
-    img: insta9,
-    link: "https://youtube.com/shorts/2lk0G8eo6m0?si=unZvMzetFuiafGQX",
+    title: "Storytelling Reel",
+    img: insta3,
+    link: "https://www.instagram.com/reel/DNbFuKIotrc/?igsh=MWJoZTN4YjBnZHZxaQ==",
   },
 
   {
     id: 11,
     category: "Reels",
     subCategory: "Storytelling",
-    img: insta10,
-    link: "https://youtube.com/shorts/T5caeSFEl8I?si=SBhneBZIuFg9m_-M",
+    title: "Storytelling Reel",
+    img: insta2,
+    link: "https://www.instagram.com/reel/DOtBJvPk7C9/?igsh=M2ZrcGNvaG10amVw",
   },
 
   {
     id: 12,
     category: "Reels",
     subCategory: "Storytelling",
+    title: "Storytelling Reel",
+    img: insta9,
+    link: "https://youtube.com/shorts/2lk0G8eo6m0?si=unZvMzetFuiafGQX",
+  },
+
+  {
+    id: 13,
+    category: "Reels",
+    subCategory: "Storytelling",
+    title: "Storytelling Reel",
+    img: insta10,
+    link: "https://youtube.com/shorts/T5caeSFEl8I?si=SBhneBZIuFg9m_-M",
+  },
+
+  {
+    id: 14,
+    category: "Reels",
+    subCategory: "Storytelling",
+    title: "Storytelling Reel",
     img: insta11,
     link: "https://youtube.com/shorts/Vm_dvjn01U8?si=7vMUWpXhAl_k-79r",
   },
 
-  // LONG VIDEOS
+  // Long Videos
   {
-    id: 13,
+    id: 15,
     category: "Long Videos",
     title: "Interview",
     img: longv1,
@@ -144,7 +165,7 @@ const works = [
   },
 
   {
-    id: 14,
+    id: 16,
     category: "Long Videos",
     title: "Travel Vlog Part-1",
     img: longv2,
@@ -152,7 +173,7 @@ const works = [
   },
 
   {
-    id: 15,
+    id: 17,
     category: "Long Videos",
     title: "Travel Vlog Part-2",
     img: longv3,
@@ -160,7 +181,7 @@ const works = [
   },
 
   {
-    id: 16,
+    id: 18,
     category: "Long Videos",
     title: "Hills Vlog",
     img: longv4,
@@ -168,7 +189,7 @@ const works = [
   },
 
   {
-    id: 17,
+    id: 19,
     category: "Long Videos",
     title: "Comedy",
     img: longv5,
@@ -176,7 +197,7 @@ const works = [
   },
 
   {
-    id: 18,
+    id: 20,
     category: "Long Videos",
     title: "Information",
     img: longv6,
@@ -184,50 +205,37 @@ const works = [
   },
 
   {
-    id: 19,
+    id: 21,
     category: "Long Videos",
     title: "Information",
     img: longv7,
     link: "https://youtu.be/BvmqRMxFBzY?si=MIMc0nmTsssdgebk",
   },
 
-  // LOGOS
+  // Logo Design
   {
-    id: 20,
+    id: 22,
     category: "Logo Design",
     title: "Aqua & Pets",
     img: logo1,
   },
 
   {
-    id: 21,
+    id: 23,
     category: "Logo Design",
     title: "Institute",
     img: logo2,
   },
 
   {
-    id: 22,
+    id: 24,
     category: "Logo Design",
     title: "Travel",
     img: logo3,
   },
-  {
-    id: 23,
-    category: "Reels",
-    subCategory: "Promotion",
-    img: insta92,
-    link: "https://www.instagram.com/reel/DTRy3pOgXVP/?igsh=MW9zZ3U1ODRjc2dtbg%3D%3D",
-  },
-  {
-    id: 24,
-    category: "Reels",
-    subCategory: "Promotion",
-    img: insta93,
-    link: "https://www.instagram.com/reel/DTRy3pOgXVP/?igsh=MW9zZ3U1ODRjc2dtbg%3D%3D",
-  },
 ];
 
+// ✅ Sub-tabs for reels
 const reelSubTabs = [
   "Promotion",
   "Storytelling",
@@ -235,149 +243,196 @@ const reelSubTabs = [
 ];
 
 export default function MyWork() {
-  const [activeTab, setActiveTab] = useState("Reels");
-  const [activeSubTab, setActiveSubTab] = useState("Promotion");
+  // Default active tab
+  const [activeTab, setActiveTab] = useState("Long Videos");
+  const [activeSubTab, setActiveSubTab] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // FILTER
+  const itemsPerPage = 4;
+
+  // ✅ Filtering
   const filteredWorks =
     activeTab === "Reels"
       ? works.filter(
-          (item) =>
-            item.category === "Reels" &&
-            item.subCategory === activeSubTab
+          (work) =>
+            work.category === "Reels" &&
+            work.subCategory === activeSubTab
         )
-      : works.filter((item) => item.category === activeTab);
+      : works.filter(
+          (work) => work.category === activeTab
+        );
 
-  // TAB STYLE
-  const tabStyle = (tab) =>
-    activeTab === tab
-      ? "bg-white text-black"
-      : "bg-[#1A1F22] text-gray-400 hover:text-white";
+  // Pagination
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+
+  const currentWorks = filteredWorks.slice(
+    indexOfFirst,
+    indexOfLast
+  );
+
+  const totalPages = Math.ceil(
+    filteredWorks.length / itemsPerPage
+  );
+
+  // ✅ Image size
+  const getImageSize = (category) => {
+    if (category === "Long Videos") {
+      return "h-48";
+    }
+
+    if (category === "Logo Design") {
+      return "h-48 p-6 bg-white object-contain";
+    }
+
+    if (category === "Reels") {
+      return "h-[520px] object-contain";
+    }
+
+    return "h-48";
+  };
 
   return (
-    <section className="bg-[#0B0F11] text-white py-20 px-5 md:px-14 overflow-hidden">
-      {/* HEADING */}
-      <div className="text-center mb-14">
-        <p className="uppercase tracking-[5px] text-gray-400 text-sm mb-3">
-          Portfolio Showcase
-        </p>
-
-        <h2 className="text-4xl md:text-6xl font-black font-exo">
-          Latest Creative Works
+    <section className="bg-[#0F1416] text-white py-16 px-6 md:px-16">
+      {/* Title */}
+      <div className="text-center mb-10">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-wide font-exo">
+          My Works
         </h2>
 
-        <div className="w-28 h-[3px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 mx-auto mt-5 rounded-full"></div>
+        <div className="w-40 h-1 bg-gradient-to-r from-red-500 via-green-500 to-blue-500 mx-auto mt-2"></div>
       </div>
 
-      {/* MAIN TABS */}
-      <div className="flex justify-center gap-4 flex-wrap mb-10">
-        <button
-          onClick={() => {
-            setActiveTab("Reels");
-            setActiveSubTab("Promotion");
-          }}
-          className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${tabStyle(
-            "Reels"
-          )}`}
-        >
-          <Play size={18} />
-          Reels
-        </button>
-
-        <button
-          onClick={() => setActiveTab("Long Videos")}
-          className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${tabStyle(
-            "Long Videos"
-          )}`}
-        >
-          <Film size={18} />
-          Long Videos
-        </button>
-
-        <button
-          onClick={() => setActiveTab("Logo Design")}
-          className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${tabStyle(
-            "Logo Design"
-          )}`}
-        >
-          <Palette size={18} />
-          Logo Design
-        </button>
-      </div>
-
-      {/* REEL SUB TABS */}
-      {activeTab === "Reels" && (
-        <div className="flex justify-center gap-3 flex-wrap mb-14">
-          {reelSubTabs.map((sub) => (
+      {/* Main Tabs */}
+      <div className="flex justify-center gap-4 mb-6 flex-wrap font-exo">
+        {["Long Videos", "Reels", "Logo Design"].map(
+          (tab) => (
             <button
-              key={sub}
-              onClick={() => setActiveSubTab(sub)}
-              className={`px-5 py-2 rounded-full text-sm transition-all duration-300 ${
-                activeSubTab === sub
-                  ? "bg-gradient-to-r from-pink-500 to-purple-600"
-                  : "bg-[#1A1F22] text-gray-400 hover:text-white"
+              key={tab}
+              onClick={() => {
+                setActiveTab(tab);
+                setCurrentPage(1);
+
+                if (tab === "Reels") {
+                  setActiveSubTab("Promotion");
+                } else {
+                  setActiveSubTab("");
+                }
+              }}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition ${
+                activeTab === tab
+                  ? "bg-gradient-to-r from-red-500 to-purple-500 text-white"
+                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
               }`}
             >
-              {sub}
+              {tab}
+            </button>
+          )
+        )}
+      </div>
+
+      {/* Reel Sub Tabs */}
+      {activeTab === "Reels" && (
+        <div className="flex justify-center gap-4 mb-10 flex-wrap font-exo">
+          {reelSubTabs.map((subTab) => (
+            <button
+              key={subTab}
+              onClick={() => {
+                setActiveSubTab(subTab);
+                setCurrentPage(1);
+              }}
+              className={`px-4 py-1 rounded-full text-sm font-medium transition ${
+                activeSubTab === subTab
+                  ? "bg-gradient-to-r from-pink-500 to-yellow-500 text-white"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              {subTab}
             </button>
           ))}
         </div>
       )}
 
-      {/* WORK GRID */}
-      <div
-        className={`grid gap-8 ${
-          activeTab === "Reels"
-            ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-        }`}
-      >
-        {filteredWorks.map((work) => (
+      {/* Works Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 font-exo">
+        {currentWorks.map((work) => (
           <a
             key={work.id}
             href={work.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden rounded-3xl bg-[#13181B] border border-white/10 hover:border-pink-500/50 transition-all duration-500"
+            className="bg-gray-900 border border-white rounded-xl overflow-hidden shadow-lg hover:scale-105 transition block"
           >
-            {/* IMAGE */}
-            <div className="relative overflow-hidden">
-              <img
-                src={work.img}
-                alt={work.title}
-                className={`w-full transition-all duration-700 group-hover:scale-110 ${
-                  work.category === "Reels"
-                    ? "h-[500px] object-cover"
-                    : work.category === "Logo Design"
-                    ? "h-[260px] object-contain p-10 bg-white"
-                    : "h-[280px] object-cover"
-                }`}
-              />
+            <img
+              src={work.img}
+              alt={work.title}
+              className={`w-full object-cover ${getImageSize(
+                work.category
+              )}`}
+            />
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-500"></div>
+            <div className="p-4">
+              {/* Hide title for reels */}
+              {work.category !== "Reels" && (
+                <>
+                  <h3 className="text-lg font-semibold">
+                    {work.title}
+                  </h3>
 
-              {/* ICON */}
-              <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500">
-                <ExternalLink size={18} />
-              </div>
+                  <p className="text-sm text-gray-400">
+                    {work.category}
+                  </p>
+                </>
+              )}
             </div>
-
-            {/* CONTENT */}
-            {work.category !== "Reels" && (
-              <div className="p-5">
-                <h3 className="text-xl font-bold mb-1">
-                  {work.title}
-                </h3>
-
-                <p className="text-sm text-gray-400">
-                  {work.category}
-                </p>
-              </div>
-            )}
           </a>
         ))}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-10 gap-3">
+          <button
+            onClick={() =>
+              setCurrentPage((prev) =>
+                Math.max(prev - 1, 1)
+              )
+            }
+            disabled={currentPage === 1}
+            className="px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 disabled:opacity-50"
+          >
+            Prev
+          </button>
+
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() =>
+                setCurrentPage(index + 1)
+              }
+              className={`px-3 py-1 rounded-full ${
+                currentPage === index + 1
+                  ? "bg-gradient-to-r from-red-500 to-purple-500 text-white"
+                  : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+              }`}
+            >
+              {index + 1}
+            </button>
+          ))}
+
+          <button
+            onClick={() =>
+              setCurrentPage((prev) =>
+                Math.min(prev + 1, totalPages)
+              )
+            }
+            disabled={currentPage === totalPages}
+            className="px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </section>
   );
 }
