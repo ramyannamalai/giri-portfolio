@@ -31,6 +31,8 @@ import insta9 from "../assets/insta9.jpeg";
 import insta10 from "../assets/insta10.jpeg";
 import insta11 from "../assets/insta11.jpeg";
 import insta91 from "../assets/insta9.png";
+import insta92 from "../assets/insta92.jpeg";
+import insta93 from "../assets/insta93.jpeg";
 
 // ================= DATA =================
 
@@ -209,6 +211,20 @@ const works = [
     category: "Logo Design",
     title: "Travel",
     img: logo3,
+  },
+  {
+    id: 23,
+    category: "Reels",
+    subCategory: "Promotion",
+    img: insta92,
+    link: "https://www.instagram.com/reel/DTRy3pOgXVP/?igsh=MW9zZ3U1ODRjc2dtbg%3D%3D",
+  },
+  {
+    id: 24,
+    category: "Reels",
+    subCategory: "Promotion",
+    img: insta93,
+    link: "https://www.instagram.com/reel/DTRy3pOgXVP/?igsh=MW9zZ3U1ODRjc2dtbg%3D%3D",
   },
 ];
 
