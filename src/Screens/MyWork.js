@@ -11,6 +11,7 @@ import longv7 from "../assets/longv7.jpeg";
 import logo1 from "../assets/4.png";
 import logo2 from "../assets/3.png";
 import logo3 from "../assets/logoc3.png";
+import { FaPlay } from "react-icons/fa";
 
 import insta1 from "../assets/insta1.png";
 import insta2 from "../assets/insta2.jpeg";

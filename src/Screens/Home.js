@@ -4,7 +4,6 @@ import Banner from "./Banner";
 import About from "./About";
 import MyWork from "./MyWork";
 import Contact from "./Contact";
-import BeforeAfter from "./BeforeAfter";
 import OurClients from "./OurClients";
 
 function App() {

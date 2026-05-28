@@ -1,8 +1,8 @@
 import React from "react";
 import heroImg from "../assets/her.png"; // 👉 replace with your image
-import { FaPlay } from "react-icons/fa";
 import b1 from "../assets/ban1.png";
 import b2 from "../assets/ban2.png";
+// REMOVE THIS
 
 const Banner = () => {
   return (
